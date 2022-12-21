@@ -311,3 +311,46 @@ def play_game():<br>
  
 # Driver Code<br>
 print("Winner is: " + str(play_game()))<br>
+
+
+OUTPUT:<br>
+[[0 0 0]
+ [0 0 0]
+ [0 0 0]]
+Board after 1 move
+[[0 0 0]
+ [1 0 0]
+ [0 0 0]]
+Board after 2 move
+[[0 0 0]
+ [1 2 0]
+ [0 0 0]]
+Board after 3 move
+[[0 1 0]
+ [1 2 0]
+ [0 0 0]]
+Board after 4 move
+[[0 1 0]
+ [1 2 0]
+ [0 2 0]]
+Board after 5 move
+[[0 1 0]
+ [1 2 0]
+ [1 2 0]]
+Board after 6 move
+[[0 1 0]
+ [1 2 0]
+ [1 2 2]]
+Board after 7 move
+[[0 1 1]
+ [1 2 0]
+ [1 2 2]]
+Board after 8 move
+[[0 1 1]
+ [1 2 2]
+ [1 2 2]]
+Board after 9 move
+[[1 1 1]
+ [1 2 2]
+ [1 2 2]]
+Winner is: 1

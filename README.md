@@ -552,8 +552,8 @@ initial = [ [ 1, 2, 3 ],
 			[ 5, 6, 0 ],
 			[ 7, 8, 4 ] ]
 
-# Solvable Final configuration
-# Value 0 is used for empty space
+# Solvable Final configuration<br>
+# Value 0 is used for empty space<br>
 final = [ [ 1, 2, 3 ],
 		[ 5, 8, 6 ],
 		[ 0, 7, 4 ] ]
@@ -565,3 +565,27 @@ empty_tile_pos = [ 1, 2 ]
 # Function call to solve the puzzle
 solve(initial, empty_tile_pos, final)<br>
 
+from sys import maxsize<br>
+from itertools import permutations<br>
+V = 4
+def travellingSalesmanProblem(graph, s):<br>
+    vertex = []<br>
+    for i in range(V):
+        if i != s:
+            vertex.append(i)<br>
+    min_path = maxsize<br>
+    next_permutation=permutations(vertex)<br>
+    for i in next_permutation:<br>
+        current_pathweight = 0<br>
+        k = s<br>
+        for j in i:<br>
+            current_pathweight += graph[k][j]<br>
+            k = j<br>
+        current_pathweight += graph[k][s]<br>
+        min_path = min(min_path, current_pathweight)<br>
+    return min_path<br>
+if __name__ == "__main__":<br>
+    graph = [[0, 10, 15, 20], [10, 0, 35, 25],<br>
+        [15, 35, 0, 30], [20, 25, 30, 0]]<br>
+    s = 0<br>
+    print(travellingSalesmanProblem(graph, s))<br>

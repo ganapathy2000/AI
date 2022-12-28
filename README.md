@@ -628,14 +628,14 @@ def train(c,t):<br>
  
 #obtaining the final hypothesis<br>
 print("The final hypothesis is:",train(d,target))<br>
-OUTPUT:
-   Sunny   Warm  Normal   Strong  Warm.1     Same   Yes
-0  Sunny   Warm    High   Strong    Warm     Same   Yes
-1  Rainy   Cold    High   Strong    Warm   Change    No
-2  Sunny   Warm    High   Strong    Cool   Change   Yes
-The attributes are:  [['Sunny' ' Warm' ' High' ' Strong' ' Warm' ' Same']
- ['Rainy' ' Cold' ' High' ' Strong' ' Warm' ' Change']
- ['Sunny' ' Warm' ' High' ' Strong' ' Cool' ' Change']]
-The target is:  [' Yes' ' No' ' Yes']
-The final hypothesis is: None
+OUTPUT:<br>
+   Sunny   Warm  Normal   Strong  Warm.1     Same   Yes<br>
+0  Sunny   Warm    High   Strong    Warm     Same   Yes<br>
+1  Rainy   Cold    High   Strong    Warm   Change    No<br>
+2  Sunny   Warm    High   Strong    Cool   Change   Yes<br>
+The attributes are:  [['Sunny' ' Warm' ' High' ' Strong' ' Warm' ' Same']<br>
+ ['Rainy' ' Cold' ' High' ' Strong' ' Warm' ' Change']<br>
+ ['Sunny' ' Warm' ' High' ' Strong' ' Cool' ' Change']]<br>
+The target is:  [' Yes' ' No' ' Yes']<br>
+The final hypothesis is: None<br>
 ​

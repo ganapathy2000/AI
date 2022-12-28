@@ -594,3 +594,38 @@ if __name__ == "__main__":<br>
     
     OUTPUT:
     80<br>
+    
+    import pandas as pd<br>
+import numpy as np<br>
+ 
+#to read the data in the csv file<br>
+data = pd.read_csv("Traineg.csv")<br>
+print(data)<br>
+ 
+#making an array of all the attributes<br>
+d = np.array(data)[:,:-1]<br>
+print("The attributes are: ",d)<br>
+ 
+#segragating the target that has positive and negative examples<br>
+target = np.array(data)[:,-1]<br>
+print("The target is: ",target)<br>
+ 
+#training function to implement find-s algorithm<br><br>
+def train(c,t):<br>
+    for i, val in enumerate(t):<br>
+        if val == "Yes":<br>
+            specific_hypothesis = c[i].copy()<br>
+            break<br>
+             
+    for i, val in enumerate(c):<br>
+        if t[i] == "Yes":<br>
+            for x in range(len(specific_hypothesis)):<br>
+                if val[x] != specific_hypothesis[x]:<br>
+                    specific_hypothesis[x] = '?'<br>
+                else:<br>
+                    pass<br>
+                return specific_hypothesis<br>
+ 
+#obtaining the final hypothesis<br>
+print("The final hypothesis is:",train(d,target))<br>
+

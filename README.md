@@ -639,3 +639,7 @@ The attributes are:  [['Sunny' ' Warm' ' High' ' Strong' ' Warm' ' Same']<br>
 The target is:  [' Yes' ' No' ' Yes']<br>
 The final hypothesis is: None<br>
 ​
+
+
+
+https://copyassignment.com/diabetes-prediction-using-machine-learning/

@@ -695,7 +695,7 @@ Output:<br>
 0 0 0 0 <br>
 True<br>
 
-
+10.program to find and implement A*algorthium using python:<br>
 def aStarAlgo(start_node, stop_node):
 
 open_set = set(start_node) <br>
@@ -730,14 +730,14 @@ while len(open_set) > 0:<br>
                 parents[m] = n<br>
                 g[m] = g[n] + weight<br>
 
-#for each node m,compare its distance from start i.e g(m) to the
-#from start through n node
-else:
-if g[m] > g[n] + weight:
-#update g(m)
-g[m] = g[n] + weight
-#change parent of m to n
-parents[m] = n
+#for each node m,compare its distance from start i.e g(m) to the<br>
+#from start through n node<br>
+else:<br>
+if g[m] > g[n] + weight:<br>
+#update g(m)<br>
+g[m] = g[n] + weight<br>
+#change parent of m to n<br>
+parents[m] = n<br>
                     #if m in closed set,remove and add to open<br>
                     if m in closed_set:<br><br>
                         closed_set.remove(m)<br>

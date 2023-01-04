@@ -771,11 +771,11 @@ parents[m] = n
 
 print('Path does not exist!')<br>
 return None<br>
-#define fuction to return neighbor and its distance
-#from the passed node
-def get_neighbors(v):
-if v in Graph_nodes:
-return Graph_nodes[v]
+#define fuction to return neighbor and its distance<br>
+#from the passed node<br>
+def get_neighbors(v):<br>
+if v in Graph_nodes:<br>
+return Graph_nodes[v]<br>
 else:
 return None
 #for simplicity we ll consider heuristic distances given<br>

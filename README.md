@@ -696,3 +696,109 @@ Output:<br>
 True<br>
 
 
+def aStarAlgo(start_node, stop_node):
+
+open_set = set(start_node) <br>
+closed_set = set()<br>
+g = {} #store distance from starting node<br>
+parents = {}# parents contains an adjacency map of all nodes<br>
+
+#ditance of starting node from itself is zero<br>
+g[start_node] = 0<br>
+#start_node is root node i.e it has no parent nodes<br>
+#so start_node is set to its own parent node<br>
+parents[start_node] = start_node<br>
+ 
+ 
+while len(open_set) > 0:<br>
+    n = None<br>
+
+    #node with lowest f() is found<br>
+    for v in open_set:<br>
+        if n == None or g[v] + heuristic(v) < g[n] + heuristic(n):<br>
+            n = v<br>
+     
+             
+    if n == stop_node or Graph_nodes[n] == None:<br>
+        pass<br>
+    else:<br>
+        for (m, weight) in get_neighbors(n):<br>
+            #nodes 'm' not in first and last set are added to first<br>
+            #n is set its parent<br>
+            if m not in open_set and m not in closed_set:<br>
+                open_set.add(m)<br>
+                parents[m] = n<br>
+                g[m] = g[n] + weight<br>
+
+#for each node m,compare its distance from start i.e g(m) to the
+#from start through n node
+else:
+if g[m] > g[n] + weight:
+#update g(m)
+g[m] = g[n] + weight
+#change parent of m to n
+parents[m] = n
+                    #if m in closed set,remove and add to open<br>
+                    if m in closed_set:<br><br>
+                        closed_set.remove(m)<br>
+                        open_set.add(m)<br>
+
+    if n == None:<br>
+        print('Path does not exist!')<br>
+        return None<br>
+
+    # if the current node is the stop_node<br>
+    # then we begin reconstructin the path from it to the start_node<br>
+    if n == stop_node:<br>
+        path = []<br>
+
+        while parents[n] != n:<br>
+            path.append(n)<br>
+            n = parents[n]<br>
+
+        path.append(start_node)<br>
+
+        path.reverse()<br>
+
+        print('Path found: {}'.format(path))<br>
+        return path<br>
+
+
+    # remove n from the open_list, and add it to closed_list<br>
+    # because all of his neighbors were inspected<br>
+    open_set.remove(n)<br>
+    closed_set.add(n)<br>
+
+print('Path does not exist!')<br>
+return None<br>
+#define fuction to return neighbor and its distance
+#from the passed node
+def get_neighbors(v):
+if v in Graph_nodes:
+return Graph_nodes[v]
+else:
+return None
+#for simplicity we ll consider heuristic distances given
+#and this function returns heuristic distance for all nodes
+def heuristic(n):
+H_dist = {
+'A': 11,
+'B': 6,
+'C': 99,
+'D': 1,
+'E': 7,
+'G': 0,
+}
+
+return H_dist[n]
+
+#Describe your graph here
+Graph_nodes = {
+'A': [('B', 2), ('E', 3)],
+'B': [('C', 1),('G', 9)],
+'C': None,
+'E': [('D', 6)],
+'D': [('G', 1)],
+
+}
+aStarAlgo('A', 'G')

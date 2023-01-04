@@ -802,3 +802,6 @@ Graph_nodes = {<br>
 
 }
 aStarAlgo('A', 'G')<br>
+OUTPUT:<br>
+Path found: ['A', 'E', 'D', 'G']<br>
+['A', 'E', 'D', 'G']<br>

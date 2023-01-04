@@ -778,27 +778,27 @@ if v in Graph_nodes:
 return Graph_nodes[v]
 else:
 return None
-#for simplicity we ll consider heuristic distances given
-#and this function returns heuristic distance for all nodes
-def heuristic(n):
-H_dist = {
-'A': 11,
-'B': 6,
-'C': 99,
-'D': 1,
-'E': 7,
-'G': 0,
-}
+#for simplicity we ll consider heuristic distances given<br>
+#and this function returns heuristic distance for all nodes<br>
+def heuristic(n):<br>
+H_dist = {<br>
+'A': 11,<br>
+'B': 6,<br>
+'C': 99,<br>
+'D': 1,<br>
+'E': 7,<br>
+'G': 0,<br>
+}<br>
 
-return H_dist[n]
+return H_dist[n]<br>
 
 #Describe your graph here
-Graph_nodes = {
-'A': [('B', 2), ('E', 3)],
-'B': [('C', 1),('G', 9)],
-'C': None,
-'E': [('D', 6)],
-'D': [('G', 1)],
+Graph_nodes = {<br>
+'A': [('B', 2), ('E', 3)],<br>
+'B': [('C', 1),('G', 9)],<br>
+'C': None,<br>
+'E': [('D', 6)],<br>
+'D': [('G', 1)],<br>
 
 }
 aStarAlgo('A', 'G')<br>

@@ -688,11 +688,11 @@ def solveNQ():<br>
     return True<br>
 solveNQ()<br>
 
-Output:
-1 0 0 0 
-0 0 0 0 
-0 0 0 0 
-0 0 0 0 
-True
+Output:<br>
+1 0 0 0<br> 
+0 0 0 0 <br>
+0 0 0 0 <br>
+0 0 0 0 <br>
+True<br>
 
 

@@ -178,7 +178,7 @@ Enter the Target/Destination Node: 1<br>
 
 Path: 2 0 1 <br>
 ​<br>
-# Tic-Tac-Toe Program using<br>
+#6. write a program using Tic-Tac-Toe Program using<br>
 # random number in Python<br>
  
 # importing all necessary libraries<br>
@@ -355,7 +355,7 @@ Board after 9 move<br>
  [1 2 2]]<br>
 Winner is: 1<br>
 
-# Python3 program to print the path from root
+# 7.program to print the path from root
 # node to destination node for N*N-1 puzzle
 # algorithm using Branch and Bound
 # The solution assumes that instance of
@@ -565,7 +565,7 @@ empty_tile_pos = [ 1, 2 ]
 # Function call to solve the puzzle
 solve(initial, empty_tile_pos, final)<br>
 
-Write a Program to Implement Travelling Salesman problem using Python:<br>
+8.Write a Program to Implement Travelling Salesman problem using Python:<br>
 
 from sys import maxsize<br>
 from itertools import permutations<br>
@@ -594,7 +594,8 @@ if __name__ == "__main__":<br>
     
     OUTPUT:
     80<br>
-    
+  
+  8.program to implement and FIND-S Algorithm for finding the most specific hypothesis based on a given set of training data samples. Read the training data from a .CSV file.<br>
     import pandas as pd<br>
 import numpy as np<br>
  
@@ -643,3 +644,48 @@ The final hypothesis is: None<br>
 
 
 https://copyassignment.com/diabetes-prediction-using-machine-learning/
+
+9.Program using n-queen problem<br>
+global N
+N = 4
+def printSolution(board):
+    for i in range(N):
+        for j in range(N):
+            print (board[i][j], end = " ")
+        print()
+def isSafe(board, row, col):
+    for i in range(col):
+        if board[row][i] == 1:
+            return False
+    for i, j in zip(range(row, -1, -1),
+            range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    for i, j in zip(range(row, N, 1),
+            range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    return True
+def solveNQUtil(board, col):
+    if col >= N:
+        return True
+    for i in range(N):
+        if isSafe(board, i, col):
+            board[i][col] = 1
+        if solveNQUtil(board, col + 1) == True:
+            return True
+        board[i][col] = 0
+    return False
+def solveNQ():
+    board = [ [0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 0, 0, 0] ]
+    if solveNQUtil(board, 0) == False:
+        print ("Solution does not exist")
+        return False
+    printSolution(board)
+    return True
+solveNQ()
+
+

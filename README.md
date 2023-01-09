@@ -29,6 +29,8 @@ bfs(visited, graph, '1')<br>
 Output:-<br>
 Following is the Breadth-First Search<br>
 1 2 10 3 8 4 9 5 6 7<br>
+***********************************************************************************************************************************************************************
+
 **2.write a program to implement a deapth first search using python**.
 graph = {<br>
 '5' : ['3','7'],<br>
@@ -60,6 +62,8 @@ Following is the Depth-First Search<br>
 7
 6
 <br>
+***********************************************************************************************************************************************************************
+
 **3.write a program to implement water jug problem using python.<br>**
 from collections import defaultdict<br>
 jug1, jug2, aim = 4, 3, 2<br>
@@ -95,6 +99,7 @@ Steps:
 4 2
 0 2
 True<br>
+***********************************************************************************************************************************************************************
 
 **4.write a program to implement tower of hannoi using python.<br>**
 def TowerOfHanoi(n , source, destination, auxiliary):<br>
@@ -123,13 +128,14 @@ Move disk 3 from source C to destination B<br>
 Move disk 1 from source A to destination C<br>
 Move disk 2 from source A to destination B<br>
 Move disk 1 from source C to destination B<br>
+***********************************************************************************************************************************************************************
 
 #5.Write a Program to Implement Best First Search using Python.<br>
 from queue import PriorityQueue<br>
 import matplotlib.pyplot as plt<br>
 import networkx as nx<br>
 
-* # for implementing BFS | returns path having lowest cost*<br>
+*  for implementing BFS | returns path having lowest cost*<br>
 def best_first_search(source, target, n):<br>
     visited = [0] *n<br>
     visited[source] = True<br>
@@ -146,7 +152,7 @@ def best_first_search(source, target, n):<br>
                 pq.put((c,v))
 print()<br>
 
-  # for adding edges to graph<br><br>
+  for adding edges to graph<br><br>
 def addedge(x, y, cost):<br>
     graph[x].append((y, cost))<br>
     graph[y].append((x, cost))<br>
@@ -178,6 +184,8 @@ Enter the Target/Destination Node: 1<br>
 
 Path: 2 0 1 <br>
 ​<br>
+***********************************************************************************************************************************************************************
+
 #6. write a program using Tic-Tac-Toe Program using<br>
 # random number in Python<br>
  
@@ -186,7 +194,7 @@ import numpy as np<br>
 import random<br>
 from time import sleep<br>
  
-# Creates an empty board<br>
+Creates an empty board<br>
  
  
 def create_board():<br>
@@ -194,7 +202,7 @@ def create_board():<br>
                      [0, 0, 0],<br>
                      [0, 0, 0]]))<br>
  
-# Check for empty places on board<br>
+Check for empty places on board<br>
  
  
 def possibilities(board):<br>
@@ -207,7 +215,7 @@ def possibilities(board):<br>
                 l.append((i, j))<br>
     return(l)<br>
  
-# Select a random place for the player<br>
+ Select a random place for the player<br>
  
  <br>
 def random_place(board, player):<br>
@@ -215,9 +223,8 @@ def random_place(board, player):<br>
     current_loc = random.choice(selection)<br>
     board[current_loc] = player<br>
     return(board)<br>
- 
-# Checks whether the player has three<br>
-# of their marks in a horizontal row<br>
+  Checks whether the player has three<br>
+ of their marks in a horizontal row<br>
  
  
 def row_win(board, player):<br>
@@ -233,8 +240,8 @@ def row_win(board, player):<br>
             return(win)<br>
     return(win)<br>
  
-# Checks whether the player has three<br>
-# of their marks in a vertical row<br>
+ Checks whether the player has three<br>
+ of their marks in a vertical row<br>
  
  
 def col_win(board, player):<br>
@@ -250,8 +257,8 @@ def col_win(board, player):<br>
             return(win)<br>
     return(win)<br>
  
-# Checks whether the player has three<br>
-# of their marks in a diagonal row<br>
+ Checks whether the player has three<br>
+ of their marks in a diagonal row<br>
  
  
 def diag_win(board, player):<br>
@@ -270,8 +277,8 @@ def diag_win(board, player):<br>
                 win = False<br>
     return win<br>
  
-# Evaluates whether there is<br>
-# a winner or a tie<br>
+ Evaluates whether there is<br>
+ a winner or a tie<br>
  
  
 def evaluate(board):<br>
@@ -288,7 +295,7 @@ def evaluate(board):<br>
         winner = -1<br>
     return winner<br>
  
-# Main function to start the game<br>
+ Main function to start the game<br>
  
  
 def play_game():<br>
@@ -309,7 +316,7 @@ def play_game():<br>
     return(winner)<br>
  
  
-# Driver Code<br>
+ Driver Code<br>
 print("Winner is: " + str(play_game()))<br>
 
 
@@ -354,6 +361,7 @@ Board after 9 move<br>
  [1 2 2]<br>
  [1 2 2]]<br>
 Winner is: 1<br>
+**********************************************************************************************************************************************************************
 
 # 7.program to print the path from root
 # node to destination node for N*N-1 puzzle
@@ -361,40 +369,40 @@ Winner is: 1<br>
 # The solution assumes that instance of
 # puzzle is solvable
 
-# Importing copy for deepcopy function
+ Importing copy for deepcopy function
 import copy
 
-# Importing the heap functions from python
-# library for Priority Queue
+#Importing the heap functions from python
+ library for Priority Queue
 from heapq import heappush, heappop
 
-# This variable can be changed to change
-# the program from 8 puzzle(n=3) to 15
-# puzzle(n=4) to 24 puzzle(n=5)...
+ This variable can be changed to change
+the program from 8 puzzle(n=3) to 15
+ puzzle(n=4) to 24 puzzle(n=5)...
 n = 3
 
-# bottom, left, top, right
+ bottom, left, top, right
 row = [ 1, 0, -1, 0 ]
 col = [ 0, -1, 0, 1 ]
 
-# A class for Priority Queue
+ A class for Priority Queue
 class priorityQueue:
 	
-	# Constructor to initialize a
-	# Priority Queue
+	 Constructor to initialize a
+	 Priority Queue
 	def __init__(self):
 		self.heap = []
 
-	# Inserts a new key 'k'
+	 Inserts a new key 'k'
 	def push(self, k):
 		heappush(self.heap, k)
 
-	# Method to remove minimum element
-	# from Priority Queue
+	 Method to remove minimum element
+	 from Priority Queue
 	def pop(self):
 		return heappop(self.heap)
 
-	# Method to know if the Queue is empty
+	 Method to know if the Queue is empty
 	def empty(self):
 		if not self.heap:
 			return True
@@ -431,9 +439,9 @@ class node:
 	def __lt__(self, nxt):
 		return self.cost < nxt.cost
 
-# Function to calculate the number of
-# misplaced tiles ie. number of non-blank
-# tiles not in their goal position
+ Function to calculate the number of
+ misplaced tiles ie. number of non-blank
+ tiles not in their goal position
 def calculateCost(mat, final) -> int:
 	
 	count = 0
@@ -465,7 +473,7 @@ def newNode(mat, empty_tile_pos, new_empty_tile_pos,
 					cost, level)
 	return new_node
 
-# Function to print the N x N matrix
+ Function to print the N x N matrix
 def printMatrix(mat):
 	
 	for i in range(n):
@@ -474,13 +482,13 @@ def printMatrix(mat):
 			
 		print()
 
-# Function to check if (x, y) is a valid
-# matrix coordinate
+ Function to check if (x, y) is a valid
+ matrix coordinate
 def isSafe(x, y):
 	
 	return x >= 0 and x < n and y >= 0 and y < n
 
-# Print path from root node to destination node<br>
+ Print path from root node to destination node<br>
 def printPath(root):<br>
 	
 	if root == None:
@@ -490,35 +498,35 @@ def printPath(root):<br>
 	printMatrix(root.mat)<br>
 	print()<br>
 
-# Function to solve N*N - 1 puzzle algorithm<br>
-# using Branch and Bound. empty_tile_pos is<br>
-# the blank tile position in the initial state.<br>
+ Function to solve N*N - 1 puzzle algorithm<br>
+using Branch and Bound. empty_tile_pos is<br>
+ the blank tile position in the initial state.<br>
 def solve(initial, empty_tile_pos, final):<br>
 	
-	# Create a priority queue to store live
-	# nodes of search tree
+	Create a priority queue to store live
+	 nodes of search tree
 	pq = priorityQueue()
 
-	# Create the root node
+	 Create the root node
 	cost = calculateCost(initial, final)
 	root = node(None, initial,
 				empty_tile_pos, cost, 0)
 
-	# Add root to list of live nodes
+	 Add root to list of live nodes
 	pq.push(root)
 
-	# Finds a live node with least cost,
-	# add its children to list of live
-	# nodes and finally deletes it from
-	# the list.
+	 Finds a live node with least cost,
+	 add its children to list of live
+	 nodes and finally deletes it from
+	 the list.
 	while not pq.empty():
 
-		# Find a live node with least estimated
-		# cost and delete it form the list of
-		# live nodes
+		 Find a live node with least estimated
+		 cost and delete it form the list of
+		 live nodes
 		minimum = pq.pop()
 
-		# If minimum is the answer node
+		 If minimum is the answer node
 		if minimum.cost == 0:
 			
 			# Print the path from root to
@@ -526,7 +534,7 @@ def solve(initial, empty_tile_pos, final):<br>
 			printPath(minimum)
 			return
 
-		# Generate all possible children
+		 Generate all possible children
 		for i in range(n):
 			new_tile_pos = [
 				minimum.empty_tile_pos[0] + row[i],
@@ -544,25 +552,25 @@ def solve(initial, empty_tile_pos, final):<br>
 				# Add child to list of live nodes
 				pq.push(child)
 
-# Driver Code
+ Driver Code
 
-# Initial configuration
-# Value 0 is used for empty space
+ Initial configuration
+ Value 0 is used for empty space
 initial = [ [ 1, 2, 3 ],
 			[ 5, 6, 0 ],
 			[ 7, 8, 4 ] ]
 
-# Solvable Final configuration<br>
-# Value 0 is used for empty space<br>
+ Solvable Final configuration<br>
+ Value 0 is used for empty space<br>
 final = [ [ 1, 2, 3 ],
 		[ 5, 8, 6 ],
 		[ 0, 7, 4 ] ]
 
-# Blank tile coordinates in
-# initial configuration
+ Blank tile coordinates in
+ initial configuration
 empty_tile_pos = [ 1, 2 ]
 
-# Function call to solve the puzzle
+ Function call to solve the puzzle
 solve(initial, empty_tile_pos, final)<br>
 
 8.Write a Program to Implement Travelling Salesman problem using Python:<br>
@@ -594,8 +602,9 @@ if __name__ == "__main__":<br>
     
     OUTPUT:
     80<br>
-  
-  8.program to implement and FIND-S Algorithm for finding the most specific hypothesis based on a given set of training data samples. Read the training data from a .CSV file.<br>
+  **********************************************************************************************************************************************************************
+ 
+ 8.Program to implement and FIND-S Algorithm for finding the most specific hypothesis based on a given set of training data samples. Read the training data from a .CSV file.<br>
     import pandas as pd<br>
 import numpy as np<br>
  
@@ -639,10 +648,7 @@ The attributes are:  [['Sunny' ' Warm' ' High' ' Strong' ' Warm' ' Same']<br>
  ['Sunny' ' Warm' ' High' ' Strong' ' Cool' ' Change']]<br>
 The target is:  [' Yes' ' No' ' Yes']<br>
 The final hypothesis is: None<br>
-​
-
-
-
+***********************************************************************************************************************************************************************
 https://copyassignment.com/diabetes-prediction-using-machine-learning/
 
 9.Program using n-queen problem<br>
@@ -694,7 +700,7 @@ Output:<br>
 0 0 0 0 <br>
 0 0 0 0 <br>
 True<br>
-
+***********************************************************************************************************************************************************************
 10.program to find and implement A*algorthium using python:<br>
 def aStarAlgo(start_node, stop_node):
 
@@ -807,98 +813,96 @@ Path found: ['A', 'E', 'D', 'G']<br>
 ['A', 'E', 'D', 'G']<br>
 **********************************************************************************************************************************************************************
 
-
-
 11.Program to find AO*:
-class Graph:
-    def __init__(self, graph, heuristicNodeList, startNode): #instantiate graph object with graph topology, heuristic values, start node
-        self.graph = graph
-        self.H=heuristicNodeList
-        self.start=startNode
-        self.parent={}
-        self.status={}
-        self.solutionGraph={}
+class Graph:<br>
+    def __init__(self, graph, heuristicNodeList, startNode): #instantiate graph object with graph topology, heuristic values, start node<br>
+        self.graph = graph<br>
+        self.H=heuristicNodeList<br>
+        self.start=startNode<br>
+        self.parent={}<br>
+        self.status={}<br>
+        self.solutionGraph={}<br>
         
-    def applyAOStar(self): # starts a recursive AO* algorithm
-        self.aoStar(self.start, False)
+    def applyAOStar(self): # starts a recursive AO* algorithm<br>
+        self.aoStar(self.start, False)<br>
 
-    def getNeighbors(self, v): # gets the Neighbors of a given node
-        return self.graph.get(v,'')
+    def getNeighbors(self, v): # gets the Neighbors of a given node<br>
+        return self.graph.get(v,'')<br>
 
-    def getStatus(self,v): # return the status of a given node
-        return self.status.get(v,0)
+    def getStatus(self,v): # return the status of a given node<br>
+        return self.status.get(v,0)<br>
 
-    def setStatus(self,v, val): # set the status of a given node
-        self.status[v]=val
+    def setStatus(self,v, val): # set the status of a given node<br>
+        self.status[v]=val<br>
 
-    def getHeuristicNodeValue(self, n):
-        return self.H.get(n,0) # always return the heuristic value of a given node
+    def getHeuristicNodeValue(self, n):<br>
+        return self.H.get(n,0) # always return the heuristic value of a given node<br>
 
-    def setHeuristicNodeValue(self, n, value):
-        self.H[n]=value # set the revised heuristic value of a given node
+    def setHeuristicNodeValue(self, n, value):<br>
+        self.H[n]=value # set the revised heuristic value of a given node<br>
 
-    def printSolution(self):
-        print("FOR GRAPH SOLUTION, TRAVERSE THE GRAPH FROM THE START NODE:",self.start)
-        print("------------------------------------------------------------")
-        print(self.solutionGraph)
-        print("------------------------------------------------------------")
+    def printSolution(self):<br>
+        print("FOR GRAPH SOLUTION, TRAVERSE THE GRAPH FROM THE START NODE:",self.start)<br>
+        print("------------------------------------------------------------")<br>
+        print(self.solutionGraph)<br>
+        print("------------------------------------------------------------")<br>
 
-    def computeMinimumCostChildNodes(self, v): # Computes the Minimum Cost of child nodes of a given node v
-        minimumCost=0
-        costToChildNodeListDict={}
-        costToChildNodeListDict[minimumCost]=[]
-        flag=True
-        for nodeInfoTupleList in self.getNeighbors(v): # iterate over all the set of child node/s
-            cost=0
-            nodeList=[]
-            for c, weight in nodeInfoTupleList:
-                cost=cost+self.getHeuristicNodeValue(c)+weight
-                nodeList.append(c)
-            if flag==True: # initialize Minimum Cost with the cost of first set of child node/s
-                minimumCost=cost
-                costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s
-                flag=False
-            else: # checking the Minimum Cost nodes with the current Minimum Cost
-                if minimumCost>cost:
-                    minimumCost=cost
-                    costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s
-        return minimumCost, costToChildNodeListDict[minimumCost] # return Minimum Cost and Minimum Cost child node/s
+    def computeMinimumCostChildNodes(self, v): # Computes the Minimum Cost of child nodes of a given node v<br>
+        minimumCost=0<br>
+        costToChildNodeListDict={}<br>
+        costToChildNodeListDict[minimumCost]=[]<br>
+        flag=True<br>
+        for nodeInfoTupleList in self.getNeighbors(v): # iterate over all the set of child node/s<br>
+            cost=0<br>
+            nodeList=[]<br>
+            for c, weight in nodeInfoTupleList:<br>
+                cost=cost+self.getHeuristicNodeValue(c)+weight<br>
+                nodeList.append(c)<br>
+            if flag==True: # initialize Minimum Cost with the cost of first set of child node/s<br>
+                minimumCost=cost<br>
+                costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s<br>
+                flag=False<br>
+            else: # checking the Minimum Cost nodes with the current Minimum Cost<br>
+                if minimumCost>cost:<br>
+                    minimumCost=cost<br>
+                    costToChildNodeListDict[minimumCost]=nodeList # set the Minimum Cost child node/s<br>
+        return minimumCost, costToChildNodeListDict[minimumCost] # return Minimum Cost and Minimum Cost child node/s<br>
 
-    def aoStar(self, v, backTracking): # AO* algorithm for a start node and backTracking status flag
-        print("HEURISTIC VALUES :", self.H)
-        print("SOLUTION GRAPH :", self.solutionGraph)
-        print("PROCESSING NODE :", v)
-        print("-----------------------------------------------------------------------------------------")
-        if self.getStatus(v) >= 0: # if status node v >= 0, compute Minimum Cost nodes of v
-            minimumCost, childNodeList = self.computeMinimumCostChildNodes(v)
-            print(minimumCost, childNodeList)
-            self.setHeuristicNodeValue(v, minimumCost)
-            self.setStatus(v,len(childNodeList))
-            solved=True # check the Minimum Cost nodes of v are solved
-            for childNode in childNodeList:
-                self.parent[childNode]=v
-                if self.getStatus(childNode)!=-1:
-                    solved=solved & False
-            if solved==True: # if the Minimum Cost nodes of v are solved, set the current node status as solved(-1)
-                self.setStatus(v,-1)
-                self.solutionGraph[v]=childNodeList # update the solution graph with the solved nodes which may be a part of solution
-            if v!=self.start: # check the current node is the start node for backtracking the current node value
+    def aoStar(self, v, backTracking): # AO* algorithm for a start node and backTracking status flag<br>
+        print("HEURISTIC VALUES :", self.H)<br>
+        print("SOLUTION GRAPH :", self.solutionGraph)<br>
+        print("PROCESSING NODE :", v)<br>
+        print("-----------------------------------------------------------------------------------------")<br>
+        if self.getStatus(v) >= 0: # if status node v >= 0, compute Minimum Cost nodes of v<br>
+            minimumCost, childNodeList = self.computeMinimumCostChildNodes(v)<br>
+            print(minimumCost, childNodeList)<br>
+            self.setHeuristicNodeValue(v, minimumCost)<br>
+            self.setStatus(v,len(childNodeList))<br>
+            solved=True # check the Minimum Cost nodes of v are solved<br>
+            for childNode in childNodeList:<br>
+                self.parent[childNode]=v<br>
+                if self.getStatus(childNode)!=-1:<br>
+                    solved=solved & False<br>
+            if solved==True: # if the Minimum Cost nodes of v are solved, set the current node status as solved(-1)<br>
+                self.setStatus(v,-1)<br>
+                self.solutionGraph[v]=childNodeList # update the solution graph with the solved nodes which may be a part of solution<br>
+            if v!=self.start: # check the current node is the start node for backtracking the current node value<br>
                 self.aoStar(self.parent[v], True) # backtracking the current node value with backtracking status set to true
-            if backTracking==False: # check the current call is not for backtracking 
-                for childNode in childNodeList: # for each Minimum Cost child node
-                    self.setStatus(childNode,0) # set the status of child node to 0(needs exploration)
-                    self.aoStar(childNode, False) # Minimum Cost child node is further explored with backtracking status as false
-                    #for simplicity we ll consider heuristic distances given
-print ("Graph - 1")
-h1 = {'A': 1, 'B': 6, 'C': 2, 'D': 12, 'E': 2, 'F': 1, 'G': 5, 'H': 7, 'I': 7, 'J': 1}
-graph1 = {
-    'A': [[('B', 1), ('C', 1)], [('D', 1)]],
-    'B': [[('G', 1)], [('H', 1)]],
-    'C': [[('J', 1)]],
-    'D': [[('E', 1), ('F', 1)]],
-    'G': [[('I', 1)]]
+            if backTracking==False: # check the current call is not for backtracking <br>
+                for childNode in childNodeList: # for each Minimum Cost child node<br>
+                    self.setStatus(childNode,0) # set the status of child node to 0(needs exploration)<br>
+                    self.aoStar(childNode, False) # Minimum Cost child node is further explored with backtracking status as false<br>
+                    #for simplicity we ll consider heuristic distances given<br>
+print ("Graph - 1")<br>
+h1 = {'A': 1, 'B': 6, 'C': 2, 'D': 12, 'E': 2, 'F': 1, 'G': 5, 'H': 7, 'I': 7, 'J': 1}<br>
+graph1 = {<br>
+    'A': [[('B', 1), ('C', 1)], [('D', 1)]],<br>
+    'B': [[('G', 1)], [('H', 1)]],<br>
+    'C': [[('J', 1)]],<br>
+    'D': [[('E', 1), ('F', 1)]],<br>
+    'G': [[('I', 1)]]<br>
 }
 
-G1= Graph(graph1, h1, 'A')
-G1.applyAOStar()
-G1.printSolution()
+G1= Graph(graph1, h1, 'A')<br>
+G1.applyAOStar()<br>
+G1.printSolution()<br>

@@ -364,10 +364,10 @@ Winner is: 1<br>
 **********************************************************************************************************************************************************************
 
 # 7.program to print the path from root
-# node to destination node for N*N-1 puzzle
-# algorithm using Branch and Bound
-# The solution assumes that instance of
-# puzzle is solvable
+ node to destination node for N*N-1 puzzle
+ algorithm using Branch and Bound
+ The solution assumes that instance of
+ puzzle is solvable
 
  Importing copy for deepcopy function
 import copy
@@ -813,7 +813,7 @@ Path found: ['A', 'E', 'D', 'G']<br>
 ['A', 'E', 'D', 'G']<br>
 **********************************************************************************************************************************************************************
 
-11.Program to find AO*:
+11.Program to find AO*:<br>
 class Graph:<br>
     def __init__(self, graph, heuristicNodeList, startNode): #instantiate graph object with graph topology, heuristic values, start node<br>
         self.graph = graph<br>

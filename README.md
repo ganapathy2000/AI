@@ -1186,16 +1186,16 @@ initial = [ [ 1, 2, 3 ],
 			[ 7, 8, 4 ] ]
 
  Solvable Final configuration
-Value 0 is used for empty space
-final = [ [ 1, 2, 3 ],
-		[ 5, 8, 6 ],
-		[ 0, 7, 4 ] ]
+Value 0 is used for empty space<br>
+final = [ [ 1, 2, 3 ],<br>
+		[ 5, 8, 6 ],<br>
+		[ 0, 7, 4 ] ]<br>
 
  Blank tile coordinates in
- initial configuration
-empty_tile_pos = [ 1, 2 ]
+ initial configuration<br>
+empty_tile_pos = [ 1, 2 ]<br>
 
- Function call to solve the puzzle
+ Function call to solve the puzzle<br>
 solve(initial, empty_tile_pos, final)
 
-This code is contributed by Kevin Joshi
+

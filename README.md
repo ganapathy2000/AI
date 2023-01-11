@@ -1125,7 +1125,7 @@ def printPath(root):
 	print()
  Function to solve N*N - 1 puzzle algorithm
 using Branch and Bound. empty_tile_pos is
-the blank tile position in the initial state.
+the blank tile position in the initial state.<br>
 def solve(initial, empty_tile_pos, final):
 	
 	 Create a priority queue to store live
@@ -1179,11 +1179,11 @@ def solve(initial, empty_tile_pos, final):
 
 Driver Code
 
- Initial configuration
- Value 0 is used for empty space
-initial = [ [ 1, 2, 3 ],
-			[ 5, 6, 0 ],
-			[ 7, 8, 4 ] ]
+ Initial configuration<br>
+ Value 0 is used for empty space<br>
+initial = [ [ 1, 2, 3 ],<br>
+			[ 5, 6, 0 ],<br>
+			[ 7, 8, 4 ] ]<br>
 
  Solvable Final configuration
 Value 0 is used for empty space<br>

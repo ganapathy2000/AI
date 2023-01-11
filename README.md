@@ -1,5 +1,5 @@
 # AI
-**#1.Write a program to implement breadth first search using python.<br>**
+**1.Write a program to implement breadth first search using python.<br>**
 graph = {<br>
 '1' : ['2','10'],<br>
 '2' : ['3','8'],<br>

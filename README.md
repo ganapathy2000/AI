@@ -1206,3 +1206,4 @@ Insulin: 2-Hour serum insulin (mu U/ml). The normal insulin level range 2 hours 
 BMI: Body mass index (weight in kg/ (height in m²)).BMI is a measure of body fat based on height and weight that applies to adult men and women. An underweight person has a BMI of 18.5 or less, a normal weight person has a BMI range of 18.5-24.9, an overweight person has a BMI in the range of 25-29.9, and an obese person has a BMI of 30 or greater.
 DiabetesPedigreeFunction: A diabetes pedigree function is a function which scores likelihood of diabetes based on family history.
 Outcome (target variable): 0-no diabetes, 1-has diabetes.
+https://github.com/chideraani/diabetes_predict/blob/masterbranch/main.py
